@@ -22,3 +22,8 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests=true
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: ptai-jenkins-plugin
+        path: ptai-jenkins-plugin/target/ptai-jenkins-plugin.hpi
